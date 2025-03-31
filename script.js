@@ -16,9 +16,11 @@ function typeEffect() {
 }
 window.onload = typeEffect;
 
-document.getElementById("ResumeBtn").addEventListener("click", () => {
-    Object.assign(document.getElementById("pdfObject"), { data: "YashwinResume.pdf", style: "display: block;" });
+document.getElementById("ResumeBtn").addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.open(this.href, "_blank");
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     new IntersectionObserver(entries => {

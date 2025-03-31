@@ -217,7 +217,7 @@ body.light-mode .nav-links a, body.light-mode .menu-toggle, body.light-mode .the
     text-align: left;
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation: opacity 1.5s ease-in-out forwards;
 }
 
 .about-image img {
@@ -228,17 +228,40 @@ body.light-mode .nav-links a, body.light-mode .menu-toggle, body.light-mode .the
     display: block;
     margin: auto;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    
+}
+.about-image{
+    opacity: 0;
+    transform: translateX(-100px); 
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
 
 .about-text {
     font-size: 1.1rem;
     line-height: 1.6;
     text-align: center;
+    transform: translateX(100px); 
+    opacity: 0;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
 
 .about-text h2 {
     font-size: 2rem;
     margin-bottom: 15px;
+}
+.about-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-container.show .about-image {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-container.show .about-text {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 @keyframes fadeInUp {

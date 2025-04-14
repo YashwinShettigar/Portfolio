@@ -398,7 +398,7 @@ body.light-mode .progress {
 
 .project-card:hover {
     transform: translateY(10px);
-    box-shadow: 0 10px 20px rgba(255, 152, 0, 0.3); /* Glowing shadow effect */
+    box-shadow: 0 10px 20px rgba(255, 152, 0, 0.3); 
 }
 
 .project-card img {
@@ -534,9 +534,9 @@ textarea {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     form {
-        width: 100%;
+        width: 90%;
     }
 }
 
